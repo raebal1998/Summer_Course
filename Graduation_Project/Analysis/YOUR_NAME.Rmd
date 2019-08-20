@@ -1,0 +1,175 @@
+---
+title: "Graduation Project"
+author: "ENTER YOUR NAME HERE"
+date: "07/29/2019" #mm/dd/yyyy
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#load all the necessary libraries and comment why did you need them.
+
+```
+
+## Study Case: churning customers from a Telecom company. 
+
+## Background Story 
+
+Now that you have taken an amazing course with your nice teacher the Arabian Analyst you decided to open a data science consulting firm. Your first customer is a Telecom company that is trying to figure out the reasons why customers are switching to their competitors.  During your meeting with the CEO Ola, she told you that she is interested to develop a model that help her company to determin which customers are likely to switch *Churn* to their competitors. She also provided you with the company data and description. 
+
+## Dataset information. 
+
+The data set contains 20 predictors worth of information about 3000 customers, along with the target variable, churn, an indication of whether that customer churned (left the company) or not  
+
+The variables are as follows: 
+
+    • State: Categorical for the 50 states and the District of Columbia. 
+    • Accountlength: Integer-valued, how long account has been active. 
+    • Areacode: Categorical 
+    • Phonenumber: Essentially a surrogate for customerID. 
+    • Internationalplan: Dichotomous categorical yes or no. . 
+    • Voicemailplan: Dichotomous categorical yes or no. 
+    • Numberofvoicemailmessages: Integer-valued. 
+    • Totaldayminutes: Continuous minutes customer used service during the day. 
+    • Totaldaycalls: Integer-valued. 
+    • Totaldaycharge: Continuous perhaps based on above two variables. 
+    • Total eve minutes: Continuous, minutes customer used service during the evening. 
+    • Totalevecalls: Integer-valued. 
+    • Totalevecharge: Continuous perhaps based on above two variables. 
+    • Total night minutes: Continuous, minutes customer used service during the night. 
+    • Totalnightcalls: Integer-valued. 
+    • Totalnightcharge: Continuous perhaps based on above two variables.  
+    • Total international minutes: Continuous, minutes customer used service to make international calls. 
+    • Totalinternationalcalls: Integer-valued. 
+    • Totalinternationalcharge:  Continuous perhaps based on above two variables. 
+    • Numberofcallstocustomerservice:  Integer-valued. 
+    • Churn: Target.Indicator of whether the customer has left the company (true or false).
+    
+## Analysis 
+
+### Setp 1: Importing the Data
+
+```{r Importing the data}
+# use read.csv or read_csv from readr packages 
+```
+
+### Setp 2: Split the dataset into training and testing sets
+
+```{r}
+# use createDataPartition() from caret package or use the sample() from base R. 
+```
+
+
+
+### Setp 3: Descriptive statistics
+
+```{r}
+# use summary() function or perform more advance descriptive statistics using dplyr package
+```
+
+Write you analysis from Descriptive statistics here .... 
+
+#### BONUS Step 3.1 : Exploratory Analysis
+```{r}
+# use ggplot to explore :
+  # data centrality 
+  # data variability 
+  # data shape 
+  # outliers 
+```
+
+Write you analysis from Exploratory Analysis here .... 
+
+
+##### Correlations 
+```{r}
+# Describe the relationship between variables 
+```
+
+Write you analysis from Correlations here .... 
+
+*hint*: identify highly correlated variables and explain why we should not include them. 
+
+##### Histograms
+
+```{r}
+# use ggplot package with geom_histogram() or hist() from base R. 
+```
+
+
+Write you analysis from Histograms here .... 
+*hint*: identify skewed variables and determine if you need to do transformation on them or not. Justify your decision. 
+
+
+
+##### Scatterplots 
+
+```{r}
+# use ggplot package with geom_point() or plot() from base R. 
+```
+
+Write you analysis from Scatterplots here .... 
+
+#### Boxplots 
+
+```{r}
+# use ggplot package with geom_boxplot() or boxplot() from base R. 
+```
+
+Write you analysis from Boxplots here .... 
+
+
+### Setp 4: handling missing data
+
+```{r}
+# use any method to determin if there is missing data or not. This include 
+# Identify if there is a character to indicate missing data. e.g -1, "", 9999
+# If the data is actually recognize by your R as NA, that is asweome 
+
+# anyNA(), skim_to_wide() from the skimr package.
+```
+
+
+
+
+### Setp 5: Create dummy variables for categorical data
+
+
+```{r}
+# Use dummyVars() from caret package or perform the conversion manually. 
+```
+
+Describe which categorical variables did you convert to dummy variables and why you chose them. 
+
+
+### Setp 6: Data Normalization and Transformation
+
+```{r}
+# Use perProcess() from caret package or perform the conversion manually. 
+```
+
+Explain why it is important to normalize the data. Moreover, based on what you decision after performing histograms, you should perform all necessary transformation here.
+
+
+### Setp 7: Training and Tuning Model
+
+```{r}
+# use train() from caret package or select your chose from any one of the models we discussed during this course
+```
+
+justify why you chose the model you did and discuss ways that this model could be improved. 
+
+*hint*: use cross validation and fine tune your model by using a grid search. 
+
+### Setp 8: Testing and Evaluating the model
+
+
+```{r}
+# use the confusionMatrix() from caret package or confusion() form DAAG package. 
+# make sure that the output data is in the right format for those functions. 
+```
+
+
+Discuss your results and explain why your model is performing well or not well. 
+
+
